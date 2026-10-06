@@ -2,42 +2,42 @@ import { CONTACTS } from '../data';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-mist bg-white">
-      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 md:grid-cols-3">
-        <div>
-          <div className="flex items-center gap-2 font-display text-xl font-extrabold">
-            <span className="grid h-9 w-9 place-items-center rounded-2xl bg-blurple text-white">o</span>
-            ophoto<span className="text-blurple">.by</span>
+    <footer className="border-t border-white/10 bg-black">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-10 pt-20 pb-10">
+        <div className="grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-7">
+            <div className="text-[11px] uppercase tracking-[0.28em] text-white/40">/ СВЯЗАТЬСЯ СО МНОЙ</div>
+            <h3 className="mt-6 font-display text-[clamp(2.5rem,7vw,6rem)] font-bold uppercase leading-[0.88] tracking-[-0.03em] text-white">
+              ДАВАЙТЕ<br />СОЗДАДИМ<br /><span className="text-red">ИСТОРИЮ</span>
+            </h3>
           </div>
-          <p className="mt-3 max-w-xs text-sm text-ink/60">
-            Фото на документы и портреты в Минске. Быстро и по правилам.
-          </p>
-        </div>
 
-        <div>
-          <div className="font-semibold">Контакты</div>
-          <a href={CONTACTS.phoneHref} className="mt-3 block font-display text-lg font-bold hover:text-blurple">
-            {CONTACTS.phone}
-          </a>
-          <p className="mt-1 text-sm text-ink/60">Ежедневно 09:00–21:00</p>
-        </div>
-
-        <div>
-          <div className="font-semibold">Мы в соцсетях</div>
-          <div className="mt-3 flex gap-3">
-            <a href={CONTACTS.tg}
-               className="grid h-11 w-11 place-items-center rounded-2xl bg-mist text-blurple transition hover:bg-blurple hover:text-white">
-              TG
+          <div className="md:col-span-3 md:col-start-9">
+            <div className="text-[11px] uppercase tracking-[0.28em] text-white/40">/ КОНТАКТЫ</div>
+            <a
+              href={CONTACTS.phoneHref}
+              className="mt-4 block font-display text-2xl font-bold text-white transition hover:text-red"
+            >
+              {CONTACTS.phone}
             </a>
-            <a href={CONTACTS.inst}
-               className="grid h-11 w-11 place-items-center rounded-2xl bg-mist text-blurple transition hover:bg-blurple hover:text-white">
-              IG
-            </a>
+            <div className="mt-6 flex flex-col gap-3">
+              <a href={CONTACTS.inst} target="_blank" rel="noreferrer"
+                 className="flex items-center justify-between border-t border-white/10 pt-3 text-[11px] uppercase tracking-[0.22em] text-white/60 transition hover:text-white">
+                INSTAGRAM <span>→</span>
+              </a>
+              <a href={CONTACTS.tg} target="_blank" rel="noreferrer"
+                 className="flex items-center justify-between border-t border-white/10 pt-3 text-[11px] uppercase tracking-[0.22em] text-white/60 transition hover:text-white">
+                TELEGRAM <span>→</span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="border-t border-mist py-5 text-center text-xs text-ink/40">
-        © {new Date().getFullYear()} ophoto.by — все права защищены
+
+        <div className="mt-20 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.28em] text-white/30">
+          <span>© {new Date().getFullYear()} OPHOTO.BY</span>
+          <span>MINSK · BELARUS</span>
+          <span>Что-то вот сюда надо будет</span>
+        </div>
       </div>
     </footer>
   );

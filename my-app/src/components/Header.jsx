@@ -2,10 +2,10 @@ import { useEffect, useState } from 'react';
 import { CONTACTS } from '../data';
 
 const NAV = [
-  { id: 'steps',    label: 'Как это работает' },
-  { id: 'pricing',  label: 'Цены' },
-  { id: 'location', label: 'Где мы' },
-  { id: 'booking',  label: 'Запись' },
+  { id: 'about',      label: 'ОБО МНЕ' },
+  { id: 'gallery',    label: 'РАБОТЫ' },
+  { id: 'conditions', label: 'ПРОЦЕСС' },
+  { id: 'pricing',    label: 'ТАРИФЫ' },
 ];
 
 export default function Header() {
@@ -21,24 +21,23 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all
-        ${scrolled ? 'bg-white/85 backdrop-blur-lg shadow-[0_2px_20px_rgba(88,101,242,0.08)]' : 'bg-transparent'}`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300
+        ${scrolled ? 'border-b border-white/10 bg-black/70 backdrop-blur-xl' : 'border-b border-transparent'}`}
     >
-      <div className="mx-auto flex h-20 max-w-6xl items-center gap-6 px-5">
-        {/* Лого */}
-        <a href="#top" className="flex items-center gap-2 font-display text-xl font-extrabold tracking-tight">
-          <span className="grid h-9 w-9 place-items-center rounded-2xl bg-blurple text-white">o</span>
-          ophoto<span className="text-blurple">.by</span>
+      <div className="mx-auto flex h-16 max-w-[1440px] items-center gap-8 px-5 sm:h-20 sm:px-10">
+        {/* logo */}
+        <a href="#top" className="flex items-center gap-3">
+          <span className="font-display text-2xl font-bold tracking-tight">
+            o!photo<span className="text-red">.by</span>
+          </span>
         </a>
 
-        {/* Навигация */}
-        <nav className="ml-auto hidden items-center gap-1 md:flex">
+        <nav className="ml-auto hidden items-center gap-9 md:flex">
           {NAV.map((n) => (
             <a
               key={n.id}
               href={`#${n.id}`}
-              className="rounded-full px-4 py-2 text-sm font-medium text-ink/70 transition
-                         hover:bg-mist hover:text-blurple"
+              className="relative text-[11px] font-medium uppercase tracking-[0.22em] text-white/55 transition hover:text-white"
             >
               {n.label}
             </a>
@@ -46,55 +45,38 @@ export default function Header() {
         </nav>
 
         <a
-          href={CONTACTS.phoneHref}
-          className="ml-auto hidden text-sm font-semibold text-ink/80 hover:text-blurple md:block"
-        >
-          {CONTACTS.phone}
-        </a>
-
-        <a
           href={CONTACTS.bookingUrl}
-          className="hidden rounded-full bg-blurple px-5 py-2.5 text-sm font-semibold text-white
-                     shadow-[0_8px_24px_-6px_rgba(88,101,242,0.7)]
-                     transition hover:brightness-110 active:scale-95 md:inline-block"
+          target="_blank" rel="noreferrer"
+          className="ml-auto hidden rounded items-center gap-3 border border-white/15 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.22em] text-white transition hover:border-red hover:bg-red md:inline-flex"
         >
-          Записаться
+          ЗАПИСАТЬСЯ
         </a>
 
-        {/* Бургер */}
         <button
           onClick={() => setOpen(!open)}
-          aria-label="Меню"
-          className="ml-auto grid h-10 w-10 place-items-center rounded-2xl bg-mist md:hidden"
+          aria-label="menu"
+          className="ml-auto grid h-10 w-10 place-items-center md:hidden"
         >
-          <span className="relative block h-4 w-5">
-            <span className={`absolute left-0 h-0.5 w-5 bg-blurple transition-all ${open ? 'top-2 rotate-45' : 'top-0'}`} />
-            <span className={`absolute left-0 top-2 h-0.5 w-5 bg-blurple transition-all ${open ? 'opacity-0' : 'opacity-100'}`} />
-            <span className={`absolute left-0 h-0.5 w-5 bg-blurple transition-all ${open ? 'top-2 -rotate-45' : 'top-4'}`} />
+          <span className="relative block h-3 w-6">
+            <span className={`absolute left-0 h-px w-6 bg-white transition-all ${open ? 'top-1.5 rotate-45' : 'top-0'}`} />
+            <span className={`absolute left-0 top-1.5 h-px w-6 bg-white transition-opacity ${open ? 'opacity-0' : 'opacity-100'}`} />
+            <span className={`absolute left-0 h-px w-6 bg-white transition-all ${open ? 'top-1.5 -rotate-45' : 'top-3'}`} />
           </span>
         </button>
       </div>
 
-      {/* Мобильное меню */}
-      <div className={`overflow-hidden bg-white/95 backdrop-blur-lg transition-[max-height] duration-300 md:hidden
-                       ${open ? 'max-h-96' : 'max-h-0'}`}>
-        <nav className="flex flex-col gap-1 px-5 pb-5">
+      <div className={`overflow-hidden border-t border-white/10 bg-black/30 transition-[max-height,opacity] duration-500 md:hidden
+        ${open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+        <nav className="flex flex-col px-5 py-4">
           {NAV.map((n) => (
-            <a
-              key={n.id}
-              href={`#${n.id}`}
-              onClick={() => setOpen(false)}
-              className="rounded-2xl px-4 py-3 font-medium hover:bg-mist"
-            >
+            <a key={n.id} href={`#${n.id}`} onClick={() => setOpen(false)}
+               className="border-b border-white/5 py-4 text-[11px] font-medium uppercase tracking-[0.22em] text-white/70">
               {n.label}
             </a>
           ))}
-          <a
-            href={CONTACTS.bookingUrl}
-            onClick={() => setOpen(false)}
-            className="mt-2 rounded-2xl bg-blurple px-4 py-3 text-center font-semibold text-white"
-          >
-            Записаться на фото
+          <a href={CONTACTS.bookingUrl} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}
+             className="mt-4 bg-red rounded py-4 text-center text-[11px] font-bold uppercase tracking-[0.22em] text-white">
+            ЗАПИСАТЬСЯ
           </a>
         </nav>
       </div>

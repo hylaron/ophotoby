@@ -4,10 +4,9 @@ export default function Location() {
   return (
     <section id="location" className="mx-auto max-w-6xl px-5 py-20">
       <h2 className="font-display text-3xl font-extrabold sm:text-4xl">Где мы находимся</h2>
-      <p className="mt-3 max-w-lg text-ink/60">Выбирайте ближайшую студию — обычно это 5 минут от метро.</p>
+      <p className="mt-3 max-w-lg text-ink/60">Выбирайте ближайшую студию - обычно это 5 минут от метро.</p>
 
       <div className="mt-10 grid gap-6 lg:grid-cols-[1.2fr_1fr]">
-        {/* Карта — потом можно воткнуть iframe Яндекс.Карт */}
         <div id="booking" className="min-h-[320px] rounded-3xl bg-mist p-8 grid place-items-center">
           <div className="text-center">
             <div className="font-display text-lg font-bold text-blurple">Карта студий</div>

@@ -1,25 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-blurple: #5865f2;
-  --color-ink: #191919;
-  --color-mist: #e4e6ff;
+  --color-red:        #e08777;   /* лососевый (salmon) - основной */
+  --color-red-deep:   #a76e64;   /* приглушённый тёмно-лососевый (для теней/ховера) */
+  --color-red-bright: #dfa89e;   /* light salmon - яркий акцент */
+  --color-black:      #0B0B0B;
+  --color-white:      #F9F9F9;
+  --color-muted:      #888888;
 
-  --font-display: "Unbounded", "Inter", system-ui, sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans:    "Inter", system-ui, sans-serif;
 }
 
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 88px; /* чтобы якоря не прятались под шапкой */
+  scroll-behavior: auto; /* рулит Lenis */
+  scroll-padding-top: 96px;
 }
 
 body {
-  background: #ffffff;
-  color: #191919;
+  background: #0B0B0B;
+  color: #F9F9F9;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* Discord-стиль «залипания» якоря */
-[id] { scroll-margin-top: 88px; }
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+
+[id] { scroll-margin-top: 96px; }
+
+::selection { background: #E60000; color: #F9F9F9; }
+
+.hairline { background-image: linear-gradient(to bottom, rgba(255,255,255,.08), rgba(255,255,255,0)); }
