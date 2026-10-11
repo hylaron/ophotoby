@@ -104,7 +104,7 @@ export default function Services({index}) {
           <div className="svc-card border border-white/12 p-7 sm:p-9 md:col-span-2 lg:col-span-2">
             <div className="text-[10px] uppercase tracking-[0.28em] text-red">/ ГАРАНТИЯ КАЧЕСТВА</div>
             <h3 className="mt-3 font-display text-2xl font-bold uppercase tracking-tight">
-              ПОЧЕМУ ФОТО ПОЛУЧАЕТСЯ ХОРОШИМ
+              Как мы создаем ваше <span className='text-red'>ЛУЧШЕЕ</span> фото
             </h3>
             <ul className="quality-list mt-6 grid gap-x-10 gap-y-3 sm:grid-cols-2">
               {QUALITY.map((q, i) => (
