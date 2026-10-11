@@ -29,17 +29,17 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className="mt-10 flex flex-wrap items-center gap-3">
+        <div className="mt-10 flex items-center gap-3 max-sm:justify-between">
           <a
             href={CONTACTS.bookingUrl} target="_blank" rel="noreferrer"
-            className="group inline-flex items-center gap-3 bg-red px-7 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-black transition hover:bg-white rounded"
+            className="group inline-flex items-center gap-3 bg-red px-7 max-sm:w-full max-sm:px-3 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-black transition hover:bg-white rounded"
           >
             ЗАПИСАТЬСЯ
-            <span className="transition-transform group-hover:translate-x-1">→</span>
+            <span className="transition-transform group-hover:translate-x-1 max-sm:hidden">→</span>
           </a>
           <a
             href={CONTACTS.phoneHref}
-            className="inline-flex items-center gap-3 border border-white/20 px-7 py-4 font-mono text-[13px] font-medium text-white transition hover:border-white hover:bg-white hover:text-black rounded"
+            className="inline-flex items-center gap-3 border max-sm:w-full border-white/20 px-7 max-sm:px-3 py-4 font-mono text-[13px] font-medium text-white transition hover:border-white hover:bg-white hover:text-black rounded"
           >
             {CONTACTS.phone}
           </a>
