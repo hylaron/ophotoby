@@ -24,11 +24,11 @@ export default function App() {
         <Documents    index={1}/>
         <Advantages   index={2}/>
         <Services     index={3}/>
-        <About        index={4}/>
+        {/* <About        index={4}/> */}
         <BeforeAfter  index={5}/>
         <FAQ          index={6}/>
         <Location     index={7}/>
-        <Gallery      index={8}/>
+        {/* <Gallery      index={8}/> */}
       </main>
       <Footer />
     </div>

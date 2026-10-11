@@ -3,6 +3,8 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SERVICES, CONTACTS, QUALITY } from '../data';
+import { CiStar } from 'react-icons/ci';
+import { FaStar } from 'react-icons/fa';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,8 +57,8 @@ export default function Services({index}) {
                   : 'border border-white/12 text-white'}`}
             >
               {s.featured && (
-                <span className="mb-6 inline-block self-start border border-black/40 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-black">
-                  ★ ОСНОВНОЕ
+                <span className="mb-6 absolute -top-5 -left-5 rounded-lg  bg-linear-to-r from-black/50 to-red/50 text-white backdrop-blur-xs py-2 flex gap-2 items-center border border-black/40 px-3 text-[10px] font-bold uppercase tracking-[0.22em]">
+                  <FaStar className='text-white text-2xl'/> <span className='text-xs'>ОСНОВНОЕ</span>
                 </span>
               )}
 
@@ -77,10 +79,10 @@ export default function Services({index}) {
                 <span className={`text-sm font-medium ${s.featured ? 'text-black/60' : 'text-white/45'}`}>{s.currency}</span>
               </div>
 
-              <ul className={`mt-8 space-y-3 border-t pt-6 text-sm ${s.featured ? 'border-black/20' : 'border-white/10'}`}>
+              <ul className={`mt-8 space-y-3 border-t pt-6 mb-5 text-sm ${s.featured ? 'border-black/20' : 'border-white/10'}`}>
                 {s.features.map((f, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className={`mt-2 h-1 w-3 shrink-0 ${s.featured ? 'bg-black' : 'bg-red'}`} />
+                    <span className={`mt-2.5 h-0.5 w-3 shrink-0 ${s.featured ? 'bg-black' : 'bg-red'}`} />
                     <span className={s.featured ? 'text-black/85' : 'text-white/75'}>{f}</span>
                   </li>
                 ))}
@@ -88,7 +90,7 @@ export default function Services({index}) {
 
               <a
                 href={CONTACTS.bookingUrl} target="_blank" rel="noreferrer"
-                className={`group mt-10 inline-flex items-center justify-center gap-3 px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.22em] transition
+                className={`group rounded mt-auto inline-flex items-center justify-center gap-3 px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.22em] transition
                   ${s.featured
                     ? 'bg-black text-white hover:bg-white hover:text-black'
                     : 'bg-red text-black hover:bg-white'}`}
