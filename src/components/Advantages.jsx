@@ -22,7 +22,6 @@ export default function Advantages({index}) {
         trigger: container.current,
         start: '50% 85%',
         once: true,
-        markers: true
       },
     });
   }, { scope: container });

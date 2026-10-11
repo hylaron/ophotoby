@@ -41,9 +41,9 @@ export default function BeforeAfter({ index = 5 }) {
   };
 
   return (
-    <section id="beforeafter" className="bg-black relative rounded-4xl overflow-hidden">
-            <div aria-hidden className="pointer-events-none absolute -top-56 right h-[52rem] w-[52rem] -translate-x-1/2 rounded-full bg-red opacity-25 blur-[180px]" />
-      <div aria-hidden className="pointer-events-none absolute -bottom-40 -right-40 h-[36rem] w-[36rem] rounded-full bg-red-deep opacity-40 blur-[180px]" />
+    <section id="beforeafter" className="bg-black relative rounded-4xl">
+            <div aria-hidden className="pointer-events-none absolute -top-56 right h-[52rem] w-[52rem] -translate-x-1/2 bg-red opacity-25 blur-[180px]" />
+      <div aria-hidden className="pointer-events-none absolute -bottom-40 -right-40 h-[36rem] w-[36rem] bg-red-deep opacity-40 blur-[180px]" />
 
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-28">
         <div className="flex items-center gap-4 border-b border-white/10 pb-5">

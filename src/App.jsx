@@ -23,9 +23,9 @@ export default function App() {
         <Hero/>
         <Documents    index={1}/>
         <Advantages   index={2}/>
-        <Services     index={3}/>
+        <BeforeAfter  index={3}/>
+        <Services     index={4}/>
         {/* <About        index={4}/> */}
-        <BeforeAfter  index={4}/>
         <FAQ          index={5}/>
         <Location     index={6}/>
         {/* <Gallery      index={8}/> */}

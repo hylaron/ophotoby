@@ -33,24 +33,30 @@ export default function Header() {
     <header className="fixed inset-x-0 top-0 z-50 bg-black/20 backdrop-blur-lg">
       {/* TOP STRIP — geo + hours + phone */}
       <div className="border-b border-white/10 bg-black/85 backdrop-blur-xl">
-        <div className="mx-auto flex h-9 max-w-[1440px] items-center justify-between gap-6 px-5 text-[10px] uppercase tracking-[0.24em] sm:px-10">
+        <div className="mx-auto flex h-9 max-w-[1440px] items-center justify-between gap-4 px-5 text-[10px] uppercase tracking-[0.24em] sm:gap-6 sm:px-10">
           <a
             href={CONTACTS.geoUrl}
             target="_blank" rel="noreferrer"
-            className="group flex items-center gap-2 text-white/70 transition hover:text-white"
+            className="group flex min-w-0 items-center gap-2 text-white/70 transition hover:text-white"
           >
             <span className="text-red">●</span>
-            <span className='max-sm:hidden'>{CONTACTS.address}</span>
-            <span className='sm:hidden'>Мы на карте</span>
 
-            <span className="opacity-0 transition group-hover:opacity-100 max-sm:hidden">→</span>
+            {/* адрес — только от sm и выше */}
+            <span className="hidden truncate sm:inline">{CONTACTS.address}</span>
+
+            {/* на мобильном — короткий текст */}
+            <span className="sm:hidden">Мы на карте</span>
+
+            <span className="hidden opacity-0 transition group-hover:opacity-100 sm:inline">→</span>
           </a>
 
-          <span className="ml-auto hidden text-white/50 lg:inline">{CONTACTS.hours}</span>
+          <span className="ml-auto hidden whitespace-nowrap text-white/50 lg:inline">
+            {CONTACTS.hours}
+          </span>
           <span className="hidden text-white/30 lg:inline">/</span>
           <a
             href={CONTACTS.phoneHref}
-            className="font-mono text-[11px] font-medium tracking-normal text-red transition hover:text-white"
+            className="whitespace-nowrap font-mono text-[11px] font-medium tracking-normal text-red transition hover:text-white"
           >
             {CONTACTS.phone}
           </a>
