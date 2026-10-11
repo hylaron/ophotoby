@@ -6,7 +6,7 @@ import { GALLERY } from '../data';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Gallery() {
+export default function Gallery({index}) {
   const container = useRef();
 
   useGSAP(() => {
@@ -24,7 +24,7 @@ export default function Gallery() {
         {/* section head */}
         <div className="flex items-center gap-4 border-b border-white/10 pb-5">
           <span className="h-1.5 w-1.5 rounded-full bg-red" />
-          <span className="text-[11px] font-medium uppercase tracking-[0.28em] text-white/50">02 / WORK</span>
+          <span className="text-[11px] font-medium uppercase tracking-[0.28em] text-white/50">0{index} / WORK</span>
           <span className="ml-auto hidden text-[11px] uppercase tracking-[0.28em] text-white/40 sm:inline">
             SELECTED · 2024–2026
           </span>
@@ -32,7 +32,7 @@ export default function Gallery() {
 
         <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
           <h2 className="font-display text-[clamp(2.75rem,8vw,6.5rem)] font-bold uppercase leading-[0.88] tracking-[-0.03em]">
-            Мои<br /><span className="text-red">РАБОТЫ</span>
+            Другие мои<br /><span className="text-red">РАБОТЫ</span>
           </h2>
           <p className="max-w-xs text-sm text-white/50">
             Каждая история - отдельный мир. Отбираю кадры с чувством.

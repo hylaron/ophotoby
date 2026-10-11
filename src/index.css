@@ -1,23 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-red:        #e08777;   /* лососевый (salmon) - основной */
-  --color-red-deep:   #a76e64;   /* приглушённый тёмно-лососевый (для теней/ховера) */
-  --color-red-bright: #dfa89e;   /* light salmon - яркий акцент */
-  --color-black:      #0B0B0B;
-  --color-white:      #F9F9F9;
-  --color-muted:      #888888;
+  --color-red:      #DF8777; /* лосось — акцент */
+  --color-red-deep: #C96B5A;
+  --color-black:    #0B0B0B;
+  --color-ink:      #131313;
+  --color-white:    #F9F9F9;
+  --color-cream:    #FEFEFE;
+  --color-muted:    #888888;
 
   --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, monospace;
   --font-sans:    "Inter", system-ui, sans-serif;
 }
 
-html {
-  scroll-behavior: auto; /* рулит Lenis */
-  scroll-padding-top: 96px;
-}
-
+html { scroll-behavior: auto; scroll-padding-top: 130px; }
 body {
   background: #0B0B0B;
   color: #F9F9F9;
@@ -25,14 +23,36 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-
-/* Lenis */
 html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+[id] { scroll-margin-top: 130px; }
+::selection { background: #DF8777; color: #0B0B0B; }
 
-[id] { scroll-margin-top: 96px; }
+/* halftone dot pattern */
+.halftone {
+  background-image: radial-gradient(#DF8777 1.2px, transparent 1.2px);
+  background-size: 10px 10px;
+}
+.halftone-dark {
+  background-image: radial-gradient(#F9F9F9 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+.halftone-ink {
+  background-image: radial-gradient(#0B0B0B 1.2px, transparent 1.2px);
+  background-size: 10px 10px;
+}
 
-::selection { background: #E60000; color: #F9F9F9; }
+/* scanlines */
+.scanlines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.06) 0px,
+    rgba(255,255,255,0.06) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
 
-.hairline { background-image: linear-gradient(to bottom, rgba(255,255,255,.08), rgba(255,255,255,0)); }
+/* focus ring */
+*:focus-visible { outline: 2px solid #DF8777; outline-offset: 3px; }

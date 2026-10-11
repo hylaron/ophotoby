@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About() {
+export default function About({index}) {
   const container = useRef();
 
   useGSAP(() => {
@@ -17,11 +17,11 @@ export default function About() {
 
   return (
     <section id="about" ref={container} className="bg-white text-black">
-      <div className="mx-auto max-w-[1440px] px-5 sm:px-10 py-24 sm:py-28">
+      <div className="mx-auto max-w-360 px-5 sm:px-10 py-24 sm:py-28">
         {/* section head */}
         <div className="about-block flex items-center gap-4 border-b border-black/10 pb-5">
           <span className="h-1.5 w-1.5 rounded-full bg-red" />
-          <span className="text-[11px] font-medium uppercase tracking-[0.28em] text-black/50">01 / ABOUT</span>
+          <span className="text-[11px] font-medium uppercase tracking-[0.28em] text-black/50">0{index} / ABOUT</span>
           <span className="ml-auto hidden text-[11px] uppercase tracking-[0.28em] text-black/40 sm:inline">
             МЕЖДУ МНОЙ И ВАМИ
           </span>
@@ -32,7 +32,7 @@ export default function About() {
           {/* big photo */}
           <div className="about-block relative col-span-1 aspect-[4/5] overflow-hidden bg-black md:col-span-5 md:aspect-auto md:row-span-2">
             <img
-              src="/images/mira.webp"
+              src="./images/mira.webp"
               alt="Мирослава"
               className="h-full w-full object-cover transition duration-700 hover:grayscale-0"
             />
