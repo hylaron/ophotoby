@@ -29,7 +29,7 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className="mt-10 flex items-center gap-3 max-sm:justify-between max-[344px]:flex-wrap">
+        <div className="mt-10 flex items-center gap-3 max-sm:justify-between max-[344px]:flex-wrap min-w-0">
           <a
             href={CONTACTS.bookingUrl} target="_blank" rel="noreferrer"
             className="group inline-flex justify-center items-center gap-3 bg-red px-7 max-sm:w-full max-sm:px-3 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-black transition hover:bg-white rounded"
