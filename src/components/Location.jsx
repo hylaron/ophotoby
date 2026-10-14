@@ -43,7 +43,7 @@ export default function Location({index}) {
                   </span>
                   <span className="text-sm text-white/50">{CONTACTS.hoursNote}</span>
                 </div>
-              </div>
+              </div> 
 
               <div className="border-t border-white/10 pt-5">
                 <div className="text-[10px] uppercase tracking-[0.28em] text-red">/ ТЕЛЕФОН</div>
