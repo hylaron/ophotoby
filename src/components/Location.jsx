@@ -52,7 +52,7 @@ export default function Location({index}) {
                   className="mt-3 block font-mono text-2xl font-medium text-white transition hover:text-red"
                 >
                   {CONTACTS.phone}
-                </a>
+                </a> 
               </div>
 
               <div className="flex flex-wrap gap-2 pt-4">
