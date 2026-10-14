@@ -38,7 +38,7 @@ export default function Location({index}) {
               <div className="border-t border-white/10 pt-5">
                 <div className="text-[10px] uppercase tracking-[0.28em] text-red">/ ЧАСЫ РАБОТЫ</div>
                 <div className="mt-3 flex flex-wrap items-baseline gap-4">
-                  <span className="font-display text-2xl font-bold uppercase text-white">
+                  <span className="font-display text-2xl font-bold uppercase text-white max-sm:text-lg">
                     {CONTACTS.hours}
                   </span>
                   <span className="text-sm text-white/50">{CONTACTS.hoursNote}</span>

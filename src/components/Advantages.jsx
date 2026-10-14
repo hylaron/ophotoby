@@ -50,8 +50,9 @@ export default function Advantages({index}) {
           {ADVANTAGES.map((a) => (
             <div
               key={a.n}
-              className="group relative flex min-h-[100px] flex-col justify-between border border-black/10 bg-white rounded-lg p-6 transition-colors duration-300 hover:border-black/30 hover:bg-black hover:text-white"
+              className="group overflow-hidden relative flex min-h-25 flex-col justify-between border border-black/10 bg-white rounded-lg p-6 transition-colors duration-300 hover:border-black/30 hover:bg-black hover:text-white"
             >
+              
               <div className="adv-item-inner flex h-full flex-col justify-between">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-[11px] font-medium tracking-widest text-red">
@@ -59,7 +60,7 @@ export default function Advantages({index}) {
                   </span>
                   <span className="h-1.5 w-1.5 rounded-full bg-black/20 transition group-hover:bg-red" />
                 </div>
-                <div className="mt-10">
+                <div className="mt-5 mb-auto">
                   <h3 className="font-display text-xl font-bold uppercase leading-tight tracking-tight">
                     {a.t}
                   </h3>
@@ -68,6 +69,8 @@ export default function Advantages({index}) {
                   </p>
                 </div>
               </div>
+              <div className='group-hover:opacity-100 opacity-0 duration-600 pointer-events-none absolute -bottom-40 -right-40 h-full w-full rounded-full bg-red-deep blur-[180px] '></div>
+
             </div>
           ))}
         </div>

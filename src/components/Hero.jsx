@@ -29,24 +29,24 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className="mt-10 flex items-center gap-3 max-sm:justify-between">
+        <div className="mt-10 flex items-center gap-3 max-sm:justify-between max-[344px]:flex-wrap">
           <a
             href={CONTACTS.bookingUrl} target="_blank" rel="noreferrer"
-            className="group inline-flex items-center gap-3 bg-red px-7 max-sm:w-full max-sm:px-3 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-black transition hover:bg-white rounded"
+            className="group inline-flex justify-center items-center gap-3 bg-red px-7 max-sm:w-full max-sm:px-3 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-black transition hover:bg-white rounded"
           >
             ЗАПИСАТЬСЯ
             <span className="transition-transform group-hover:translate-x-1 max-sm:hidden">→</span>
           </a>
           <a
             href={CONTACTS.phoneHref}
-            className="inline-flex items-center gap-3 border max-sm:w-full border-white/20 px-7 max-sm:px-3 py-4 font-mono text-[13px] font-medium text-white transition hover:border-white hover:bg-white hover:text-black rounded"
+            className="inline-flex items-center justify-center text-nowrap gap-3 border max-sm:w-full border-white/20 px-7 max-sm:px-3 py-4 font-mono text-[13px] font-medium text-white transition hover:border-white hover:bg-white hover:text-black rounded"
           >
             {CONTACTS.phone}
           </a>
         </div>
 
 {/* quick strip */}
-<div className="relative z-10 mt-16 -mb-10 overflow-hidden rounded-3xl border border-red/15 bg-black/80 backdrop-blur-md">
+<div className="relative z-10 mt-16 -mb-10 overflow-hidden rounded-3xl border border-red/15 bg-black/90 backdrop-blur-md">
   <div className="grid grid-cols-1 gap-2 p-2 sm:grid-cols-3 sm:gap-3 sm:p-3">
     {[
       { k: 'РЕЖИМ РАБОТЫ', v: '10:00 — 21:00',   s: 'каждый день, по записи' },
