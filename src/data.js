@@ -5,7 +5,7 @@ export const CONTACTS = {
   inst:      'https://www.instagram.com/o.photo.by/',
   viber:     'viber://chat?number=%2B375333781919',
   wa:        'https://wa.me/375333781919',
-  bookingUrl:'#',
+  bookingUrl:'https://n2664268.yclients.ru',
   geoUrl:    'https://yandex.by/maps/?text=Минск, улица Карла Маркса, 40',
   address:   'г. Минск, ул. Карла Маркса, 40, оф. 31',
   addressNote: '2 этаж, главный вход в здание БРСМ. Чтобы пройти, нужен документ - нет с собой? Позвоните, мы вас проводим.',
