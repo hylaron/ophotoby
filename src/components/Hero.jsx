@@ -41,7 +41,7 @@ export default function Hero() {
             href={CONTACTS.phoneHref}
             className="inline-flex items-center justify-center text-nowrap gap-3 border max-sm:w-full border-white/20 px-7 max-sm:px-3 py-4 font-mono text-[13px] font-medium text-white transition hover:border-white hover:bg-white hover:text-black rounded"
           >
-            {CONTACTS.phone}
+            <span className='text-nowrap whitespace-nowrap hyphens-none break-keep'>{CONTACTS.phone}</span>
           </a>
         </div>
 
