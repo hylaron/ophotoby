@@ -84,9 +84,10 @@ export default function Header() {
         <div className="mx-auto flex h-16 max-w-[1440px] items-center gap-6 px-5 sm:h-[72px] sm:px-10">
           {/* logo */}
           <a href="#top" className="flex items-center gap-1">
-            <span className="font-logo text-[22px] tracking-tight">
+            {/* <span className="font-logo text-[22px] tracking-tight">
               <span className="text-red pr-0.5">О!</span>Фото
-            </span>
+            </span> */}
+            <img src="./logo.webp" alt="О!Фото" className='h-5' />
           </a>
 
           {/* nav — только lg+ */}
