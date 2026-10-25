@@ -28,7 +28,7 @@ export default function Location({index}) {
                   href={CONTACTS.geoUrl} target="_blank" rel="noreferrer"
                   className="mt-3 block font-display text-2xl font-bold uppercase leading-tight text-white transition hover:text-red"
                 >
-                  {CONTACTS.address} →
+                  {CONTACTS.address}
                 </a>
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-white/60">
                   {CONTACTS.addressNote}

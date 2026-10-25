@@ -95,7 +95,7 @@ export default function Services({index}) {
                     ? 'bg-black text-white hover:bg-white hover:text-black'
                     : 'bg-red text-black hover:bg-white'}`}
               >
-                ЗАПИСАТЬСЯ <span className="transition-transform group-hover:translate-x-1">→</span>
+                ЗАПИСАТЬСЯ
               </a>
             </div>
           ))}

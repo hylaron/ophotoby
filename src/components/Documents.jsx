@@ -41,7 +41,7 @@ export default function Documents({index}) {
               href="#services"
               className="mt-8 inline-flex items-center gap-3 border border-black/15 px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.22em] transition hover:border-black hover:bg-black hover:text-white"
             >
-              СМОТРЕТЬ ТАРИФЫ <span>→</span>
+              СМОТРЕТЬ ТАРИФЫ
             </a>
           </div>
 

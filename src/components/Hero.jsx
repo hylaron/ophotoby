@@ -35,7 +35,6 @@ export default function Hero() {
             className="group inline-flex justify-center items-center gap-3 bg-red px-7 max-sm:w-full max-sm:px-3 py-4 text-[12px] font-bold uppercase tracking-[0.22em] text-black transition hover:bg-white rounded"
           >
             ЗАПИСАТЬСЯ
-            <span className="transition-transform group-hover:translate-x-1 max-sm:hidden">→</span>
           </a>
           <a
             href={CONTACTS.phoneHref}

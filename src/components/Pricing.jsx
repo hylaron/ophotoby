@@ -92,7 +92,6 @@ export default function Pricing() {
                     : 'bg-red text-white hover:bg-red-bright'}`}
               >
                 ЗАПИСАТЬСЯ НА СЪЁМКУ
-                <span className="transition-transform group-hover:translate-x-1">→</span>
               </a>
             </div>
           ))}

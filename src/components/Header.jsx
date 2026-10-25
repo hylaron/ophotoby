@@ -55,10 +55,6 @@ export default function Header() {
 
             {/* короткий текст — только на мобильном (до md) */}
             <span className="md:hidden">Мы на карте</span>
-
-            <span className="hidden opacity-0 transition group-hover:opacity-100 md:inline">
-              →
-            </span>
           </a>
 
           {/* часы — только lg+ */}
@@ -87,10 +83,9 @@ export default function Header() {
       >
         <div className="mx-auto flex h-16 max-w-[1440px] items-center gap-6 px-5 sm:h-[72px] sm:px-10">
           {/* logo */}
-          <a href="#top" className="flex items-center gap-1">
-            <img src="./logo.webp" alt="ophoto.by" className="size-8" />
-            <span className="font-display text-[16px] font-bold tracking-tight">
-              photo<span className="text-red">.by</span>
+          <a href="#top" className="flex items-center font-semibold gap-1">
+            <span className="font-display text-[24px] tracking-tight">
+              <span className="text-red pr-0.5">О!</span>Фото
             </span>
           </a>
 
