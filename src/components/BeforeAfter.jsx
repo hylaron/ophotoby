@@ -41,26 +41,24 @@ export default function BeforeAfter({ index = 5 }) {
   };
 
   return (
-    <section id="beforeafter" className="bg-black relative rounded-4xl overflow-hidden">
-            <div aria-hidden className="pointer-events-none absolute -top-56 right h-[52rem] w-[52rem] -translate-x-1/2 bg-red opacity-25 blur-[180px]" />
-      <div aria-hidden className="pointer-events-none absolute -bottom-40 -right-40 h-[36rem] w-[36rem] bg-red-deep opacity-40 blur-[180px]" />
-
-      <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-28">
-        <div className="flex items-center gap-4 border-b border-white/10 pb-5">
+    <section id="beforeafter" className="bg-cover relative rounded-4xl overflow-hidden" 
+              style={{ backgroundImage: 'url("/images/bg2.webp")' }} >
+     <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-28">
+        <div className="flex items-center gap-4 border-b border-red/50 pb-5">
           <span className="h-1.5 w-1.5 rounded-full bg-red" />
-          <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-white/50">
+          <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-red">
             0{index} / Сравнение
           </span>
-          <span className="ml-auto hidden text-[11px] uppercase tracking-[0.24em] text-white/40 sm:inline">
+          <span className="ml-auto hidden text-[11px] uppercase tracking-[0.24em] text-red sm:inline">
             ПОТЯНИ ПОЛЗУНОК
           </span>
         </div>
 
         <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
           <h2 className="font-display text-[clamp(2.25rem,6.5vw,5.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.03em]">
-            РАЗНИЦА<br /><span className="text-red">ОЧЕВИДНА</span>
+            РАЗНИЦА<br /><span className="text-orange-500">ОЧЕВИДНА</span>
           </h2>
-          <p className="max-w-xs text-sm text-white/50">
+          <p className="max-w-xs text-sm text-orange-500">
             Слева — обычное фото из салона. Справа — наша ретушь и свет.
             Один и тот же человек.
           </p>
@@ -96,10 +94,10 @@ export default function BeforeAfter({ index = 5 }) {
 
           {/* handle */}
           <div
-            className="pointer-events-none absolute inset-y-0 z-20 w-px bg-white shadow-[0_0_20px_rgba(0,0,0,0.6)]"
+            className="pointer-events-none absolute inset-y-0 z-20 w-px bg-red shadow-[0_0_20px_rgba(255,255,255,0.6)]"
             style={{ left: `${pos}%` }}
           >
-            <div className="absolute top-1/2 left-1/2 grid h-12 w-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/40 bg-black/80 backdrop-blur">
+            <div className="absolute top-1/2 left-1/2 grid h-12 w-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-red/40 bg-red/80 backdrop-blur">
               <span className="font-mono text-[10px] font-bold tracking-widest text-white">
                 ◀ ▶
               </span>
@@ -115,7 +113,7 @@ export default function BeforeAfter({ index = 5 }) {
           </span>
         </div>
 </div>
-        <p className="mt-4 text-center text-[11px] uppercase tracking-[0.24em] text-white/40">
+        <p className="mt-4 text-center text-[11px] uppercase tracking-[0.24em] text-red">
           Наглядное сравнение ДО / ПОСЛЕ
         </p>
       </div>
