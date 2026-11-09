@@ -4,40 +4,49 @@ export default function Hero() {
   return (
     <section 
       id="top" 
-      className="relative overflow-hidden pt-36 pb-24 sm:pt-44 sm:pb-32 bg-cover bg-center"
+      className="relative overflow-hidden pt-36 pb-24 sm:pt-44 sm:pb-32 bg-cover bg-center rounded-b-4xl"
       // ВСТАВЬ СЮДА СВОЮ КАРТИНКУ
       style={{ backgroundImage: 'url("/images/bg.webp")' }}
     >
-      {/* Легкая вуаль для читаемости текста, если фон темный. Если фон светлый - убери bg-white/20 */}
-      <div className="absolute inset-0 bg-white/20 pointer-events-none" />
 
       <div className="relative z-10 mx-auto max-w-[1440px] px-5 sm:px-10">
         
-        <h1 className="mt-10 font-display text-[clamp(2rem,10vw,6rem)] font-bold uppercase leading-[0.88] tracking-[-0.04em] text-black">
-          КРАСИВЫЕ ФОТО<br />
-          НА ДОКУМЕНТЫ<br />
-          <span className="text-red">В МИНСКЕ</span>
-        </h1>
+        <div className='flex justify-between flex-wrap gap-10'>
+          <div>
 
-        <p className="mt-8 max-w-xl text-[18px] text-black/80 font-medium">
+          <h1 className="mt-10 font-display text-[clamp(2rem,10vw,6rem)] font-bold uppercase leading-[0.88] tracking-[-0.04em] text-black">
+            КРАСИВЫЕ ФОТО<br />
+            НА ДОКУМЕНТЫ<br />
+            <span className="text-red">В МИНСКЕ</span>
+          </h1>
+                  <p className="mt-8 max-w-xl text-[18px] text-black/80 font-medium">
           Вы точно себе понравитесь. Быстро, удобно и с хорошим результатом — ретушь за 10 минут, студия в центре.
         </p>
-
-        {/* Кнопки */}
+                {/* Кнопки */}
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <a
             href={CONTACTS.bookingUrl} target="_blank" rel="noreferrer"
-            className="inline-flex items-center gap-3 rounded bg-red px-7 py-3.5 text-[13px] font-medium text-white shadow-[0_4px_15px_rgba(255,92,26,0.3)] transition hover:bg-[#E04D13] hover:shadow-none"
+            className="inline-flex items-center gap-3 rounded bg-red px-7 py-3.5 text-[14px] font-medium text-white shadow-[0_4px_15px_rgba(255,92,26,0.3)] transition hover:bg-white hover:border-red hover:text-red border border-transparent hover:shadow-none"
           >
             ЗАПИСАТЬСЯ
           </a>
           <a
             href={CONTACTS.phoneHref}
-            className="inline-flex items-center justify-center rounded border border-black/50 bg-white/40 backdrop-blur-sm px-7 py-3.5 text-[13px] text-black transition hover:border-black hover:bg-white/80"
+            className="inline-flex items-center justify-center rounded border border-black/50 bg-white/40 backdrop-blur-sm px-7 py-3.5 text-[14px] text-black transition hover:border-black hover:bg-white/80"
           >
             {CONTACTS.phone}
           </a>
         </div>
+          </div>
+          <div className='relative flex-1 mt-10'>
+            <img className='relative z-2 aspect-square object-cover object-top rounded-full border-red' src="/images/women.webp" alt="" />
+            <div className='z-1 rounded-full absolute inset-0 -mt-5 -mr-5 border-2 border-orange-400/20'></div>
+          </div>
+        </div>
+
+
+
+
 
         {/* Плашка (Quick Strip) */}
         <div className="mt-20 rounded-[2rem] border border-white/60 bg-white/60 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] backdrop-blur-xl">

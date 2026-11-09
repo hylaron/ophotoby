@@ -31,9 +31,9 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-lg shadow-sm border-b border-black/5' : 'bg-white/20 backdrop-blur-sm'}`}>
       {/* Верхняя тонкая полоса */}
-      <div className="border-b border-black/5 bg-white backdrop-blur-md">
+      <div className="border-b border-black/5">
         <div className="mx-auto flex h-10 max-w-[1440px] items-center justify-between gap-3 px-5 text-[14px] tracking-wide sm:gap-6 sm:px-10 text-black/80">
           <a href={CONTACTS.geoUrl} target="_blank" rel="noreferrer" className="group flex min-w-0 items-center gap-2 transition hover:text-black">
             <span className="text-[20px] -mb-[1px] text-red"><TbPointFilled/></span>
@@ -51,7 +51,7 @@ export default function Header() {
       </div>
 
       {/* Основная шапка */}
-      <div className={`transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-lg shadow-sm border-b border-black/5' : 'bg-white/20 backdrop-blur-sm'}`}>
+      <div className="transition-all duration-300">
         <div className="mx-auto flex h-20 max-w-[1440px] items-center gap-6 px-5 sm:px-10">
           
           <a href="#top" className="flex items-baseline gap-0.5 shrink-0 text-4xl">

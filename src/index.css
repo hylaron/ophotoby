@@ -56,3 +56,39 @@ html.lenis, html.lenis body { height: auto; }
 
 /* focus ring */
 *:focus-visible { outline: 2px solid #DF8777; outline-offset: 3px; }
+
+
+/* =========================================
+   КАСТОМНЫЙ СКРОЛЛБАР
+   ========================================= */
+
+/* Для Chrome, Edge, Safari (Webkit) */
+::-webkit-scrollbar {
+  width: 10px; /* Ширина вертикального скролла */
+  height: 10px; /* Высота горизонтального скролла */
+}
+
+/* Фон (дорожка) скроллбара */
+::-webkit-scrollbar-track {
+  background: #FFF5F0; /* Светлый персиковый фон, как у сайта */
+}
+
+/* Сам ползунок */
+::-webkit-scrollbar-thumb {
+  background: #FF5C1A; /* Твой оранжевый цвет */
+  border-radius: 10px; /* Закругления */
+  border: 2px solid #FFF5F0; /* Отступ, чтобы ползунок не прилипал к краям */
+}
+
+/* Ползунок при наведении */
+::-webkit-scrollbar-thumb:hover {
+  background: #E04D13; /* Темно-оранжевый (red-deep) */
+}
+
+/* =========================================
+   Для Firefox
+   ========================================= */
+* {
+  scrollbar-width: thin; /* Тонкий скроллбар */
+  scrollbar-color: #FF5C1A #FFF5F0; /* Ползунок и фон */
+}
