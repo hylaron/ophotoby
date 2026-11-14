@@ -16,7 +16,7 @@ export default function App() {
   // useSmoothScroll();
 
   return (
-    <div className="relative min-h-screen bg-white font-sans text-white antialiased">
+    <div className="relative min-h-screen bg-white font-sans text-white antialiased overflow-x-hidden">
       {/* <Grain /> */}
       <Header />
       <main>

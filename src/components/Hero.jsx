@@ -23,16 +23,16 @@ export default function Hero() {
             Вы точно себе понравитесь. Быстро, удобно и с хорошим результатом — ретушь за 10 минут, студия в центре.
           </p>
                 {/* Кнопки */}
-        <div className="mt-10 flex flex-wrap items-center gap-4">
+        <div className="mt-10 flex flex-wrap items-center max-lg:justify-between gap-4">
           <a
             href={CONTACTS.bookingUrl} target="_blank" rel="noreferrer"
-            className="inline-flex items-center gap-3 rounded bg-red px-7 py-3.5 text-[14px] font-medium text-white shadow-[0_4px_15px_rgba(255,92,26,0.3)] transition hover:bg-white hover:border-red hover:text-red border border-transparent hover:shadow-none"
+            className="inline-flex max-lg:flex-1 max-lg:justify-center items-center gap-3 rounded bg-red px-7 py-3.5 text-[14px] font-medium text-white shadow-[0_4px_15px_rgba(255,92,26,0.3)] transition hover:bg-white hover:border-red hover:text-red border border-transparent hover:shadow-none"
           >
             ЗАПИСАТЬСЯ
           </a>
           <a
             href={CONTACTS.phoneHref}
-            className="inline-flex items-center justify-center rounded border border-black/50 bg-white/40 backdrop-blur-sm px-7 py-3.5 text-[14px] text-black transition hover:border-black hover:bg-white/80"
+            className="inline-flex max-lg:flex-1 max-sm:px-2 items-center justify-center rounded border border-black/50 bg-white/40 backdrop-blur-sm px-7 py-3.5 text-[14px] text-black transition hover:border-black hover:bg-white/80"
           >
             {CONTACTS.phone}
           </a>
