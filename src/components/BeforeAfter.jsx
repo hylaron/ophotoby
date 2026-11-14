@@ -44,7 +44,7 @@ export default function BeforeAfter({ index = 5 }) {
     // Убрал жесткие рамки и скругления секции, чтобы сливалось с общим фоном сайта
     <section 
       id="beforeafter" 
-      className='relative w-full bg-cover bg-no-repeat lg:bg-[url("/images/bg2.webp")] max-lg:bg-[url("/images/bg2m.webp")] rounded-[5%]'
+      className='relative w-full bg-cover bg-no-repeat bg-[url("/images/bg2.webp")] max-lg:bg-[url("/images/bg2m.webp")] rounded-[5%]'
     >
       <div className="relative z-10 mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       {/* Верхняя линия с подписями */}
@@ -62,7 +62,7 @@ export default function BeforeAfter({ index = 5 }) {
         <div className="mt-12 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           
           {/* Заголовок (добавил легкую тень, чтобы белый текст не сливался со светлым фоном) */}
-          <h2 className="font-display text-[clamp(4rem,6.5vw,5.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.03em] drop-shadow-xl drop-shadow-black/20">
+          <h2 className="font-display text-[clamp(3.5rem,6.5vw,5.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.03em] drop-shadow-xl drop-shadow-black/20">
             РАЗНИЦА<br />
             <span className="text-[#FF5C1A]">ОЧЕВИДНА</span>
           </h2>

@@ -28,7 +28,7 @@ export default function Services({ index = 3 }) {
     <section 
       id="services" 
       ref={container} 
-      className='relative w-full bg-cover bg-no-repeat lg:bg-[url("/images/bg3.webp")] max-lg:bg-[url("/images/bg3m.webp")] max-lg:bg-bottom rounded-[5%]'
+      className='relative w-full bg-cover bg-no-repeat bg-[url("/images/bg3.webp")] max-lg:bg-[url("/images/bg3m.webp")] max-lg:bg-bottom rounded-[5%]'
     >
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
         
