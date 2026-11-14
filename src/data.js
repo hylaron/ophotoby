@@ -71,7 +71,7 @@ export const SERVICES = [
   {
     id: 'business',
     name: 'БИЗНЕС-ПОРТРЕТ',
-    price: '70',
+    price: '75',
     currency: 'Br.',
     subtitle: 'Резюме, сайт, соцсети или просто для себя',
     features: [

@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section 
       id="top" 
-      className="relative overflow-hidden pt-36 pb-24 sm:pt-44 sm:pb-32 bg-cover bg-center rounded-b-4xl"
+      className="relative overflow-hidden pt-36 pb-24 sm:pt-44 sm:pb-32 bg-cover bg-center rounded-b-[5%]"
       // ВСТАВЬ СЮДА СВОЮ КАРТИНКУ
       style={{ backgroundImage: 'url("/images/bg.webp")' }}
     >
@@ -19,9 +19,9 @@ export default function Hero() {
             НА ДОКУМЕНТЫ<br />
             <span className="text-red">В МИНСКЕ</span>
           </h1>
-                  <p className="mt-8 max-w-xl text-[18px] text-black/80 font-medium">
-          Вы точно себе понравитесь. Быстро, удобно и с хорошим результатом — ретушь за 10 минут, студия в центре.
-        </p>
+          <p className="mt-8 max-w-xl text-[18px] text-black/80 font-medium">
+            Вы точно себе понравитесь. Быстро, удобно и с хорошим результатом — ретушь за 10 минут, студия в центре.
+          </p>
                 {/* Кнопки */}
         <div className="mt-10 flex flex-wrap items-center gap-4">
           <a
@@ -39,7 +39,7 @@ export default function Hero() {
         </div>
           </div>
           <div className='relative flex-1 mt-10'>
-            <img className='relative z-2 aspect-square object-cover object-top rounded-full border-red' src="/images/women.webp" alt="" />
+            <img className='relative z-2 aspect-square object-cover object-top rounded-full border-red shadow-2xl shadow-red' src="/images/women.webp" alt="" />
             <div className='z-1 rounded-full absolute inset-0 -mt-5 -mr-5 border-2 border-orange-400/20'></div>
           </div>
         </div>

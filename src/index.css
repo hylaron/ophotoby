@@ -27,7 +27,7 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 [id] { scroll-margin-top: 130px; }
-::selection { background: #DF8777; color: #0B0B0B; }
+::selection { background: #FF5C1A; color: #0B0B0B; }
 
 /* halftone dot pattern */
 .halftone {

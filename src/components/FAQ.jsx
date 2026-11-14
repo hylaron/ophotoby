@@ -16,7 +16,7 @@ export default function FAQ({index}) {
           </span>
         </div>
 
-        <h2 className="mt-10 max-w-3xl font-display text-[clamp(2.25rem,6.5vw,5rem)] font-bold uppercase leading-[0.9] tracking-[-0.03em]">
+        <h2 className="mt-10 max-w-3xl font-display text-[clamp(3rem,6.5vw,5rem)] font-bold uppercase leading-[0.9] tracking-[-0.03em]  drop-shadow-xl drop-shadow-black/10">
           ЧАСТЫЕ <span className="text-red">ВОПРОСЫ</span>
         </h2>
 
@@ -44,7 +44,7 @@ export default function FAQ({index}) {
                     <span className="flex-1 font-display text-lg font-bold uppercase leading-tight tracking-tight sm:text-xl">
                       {item.q}
                     </span>
-                    <span className={`grid h-8 w-8 shrink-0 place-items-center border border-black/20 transition rounded-full ${isOpen ? 'bg-red border-red text-black' : ''}`}>
+                    <span className={`grid h-8 w-8 shrink-0 place-items-center border border-black/20 transition rounded-full ${isOpen ? 'bg-red/20 border-red text-black' : ''}`}>
                       <span className="text-sm">{isOpen ? <FiMinus /> : <FiPlus />}</span>
                     </span>
                   </button>

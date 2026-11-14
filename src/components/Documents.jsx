@@ -27,7 +27,7 @@ export default function Documents({index}) {
           </span>
         </div>
 
-            <h2 className="font-display text-[clamp(2.25rem,6.5vw,5.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.03em] pt-10">
+            <h2 className="font-display text-[clamp(3rem,6.5vw,5.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.03em] pt-10  drop-shadow-xl drop-shadow-black/10">
               ВСЕ ВИДЫ<br /><span className="text-red">ДОКУМЕНТОВ</span>
             </h2>
         <div className="mt-10 grid gap-10 md:grid-cols-12">

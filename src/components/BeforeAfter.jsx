@@ -41,81 +41,100 @@ export default function BeforeAfter({ index = 5 }) {
   };
 
   return (
-    <section id="beforeafter" className="bg-cover relative rounded-4xl overflow-hidden" 
-              style={{ backgroundImage: 'url("/images/bg2.webp")' }} >
-     <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-28">
-        <div className="flex items-center gap-4 border-b border-red/50 pb-5">
-          <span className="h-1.5 w-1.5 rounded-full bg-red" />
-          <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-red">
-            0{index} / Сравнение
+    // Убрал жесткие рамки и скругления секции, чтобы сливалось с общим фоном сайта
+    <section 
+      id="beforeafter" 
+      className="relative w-full bg-cover  bg-no-repeat"
+      style={{ backgroundImage: 'url("/images/bg2.webp")' }}
+    >
+      <div className="relative z-10 mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
+      {/* Верхняя линия с подписями */}
+        <div className="flex items-center gap-4 border-b border-black/20 pb-5">
+          <span className="h-1.5 w-1.5 rounded-full bg-[#FF5C1A]" />
+          <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-black/70">
+            0{index} / СРАВНЕНИЕ
           </span>
-          <span className="ml-auto hidden text-[11px] uppercase tracking-[0.24em] text-red sm:inline">
+          <span className="ml-auto hidden text-[11px] font-bold uppercase tracking-[0.24em] text-black/80 sm:inline">
             ПОТЯНИ ПОЛЗУНОК
           </span>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-end justify-between gap-6">
-          <h2 className="font-display text-[clamp(2.25rem,6.5vw,5.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.03em]">
-            РАЗНИЦА<br /><span className="text-orange-500">ОЧЕВИДНА</span>
+        {/* Заголовок и описание (как на референсе — слева и справа) */}
+        <div className="mt-12 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+          
+          {/* Заголовок (добавил легкую тень, чтобы белый текст не сливался со светлым фоном) */}
+          <h2 className="font-display text-[clamp(4rem,6.5vw,5.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.03em] drop-shadow-xl drop-shadow-black/20">
+            РАЗНИЦА<br />
+            <span className="text-[#FF5C1A]">ОЧЕВИДНА</span>
           </h2>
-          <p className="max-w-xs text-sm text-orange-500">
-            Слева — обычное фото из салона. Справа — наша ретушь и свет.
-            Один и тот же человек.
+
+          {/* Описание (добавил стеклянную плашку и темный текст) */}
+          <div className="max-w-xs md:mt-6">
+            <div className="rounded-2xl border border-white/50 bg-white/40 p-5 backdrop-blur-md shadow-sm">
+              <p className="text-[14px] font-medium leading-relaxed text-black">
+                Слева — обычное фото из салона. Справа — наша ретушь и свет. Один и тот же человек.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+
+        {/* Сам слайдер */}
+        <div className="mt-16 flex justify-center w-full">
+          <div
+            ref={ref}
+            onMouseDown={start}
+            onTouchStart={start}
+            // Сделал контейнер широким, но с ограничением по высоте, чтобы фото не было гигантским
+            className="relative w-full max-w-[800px] aspect-[3/4] sm:aspect-[4/5] cursor-ew-resize select-none overflow-hidden rounded-[2rem] shadow-2xl"
+            style={{ touchAction: 'none' }}
+          >
+            {/* AFTER — база */}
+            <img
+              src={BEFORE_AFTER.after}
+              alt="после"
+              draggable={false}
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+
+            {/* BEFORE — обрезаем */}
+            <img
+              src={BEFORE_AFTER.before}
+              alt="до"
+              draggable={false}
+              className="absolute inset-0 h-full w-full object-cover"
+              style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
+            />
+
+            {/* Ползунок */}
+            <div
+              className="pointer-events-none absolute inset-y-0 z-20 w-0.5 bg-white shadow-[0_0_20px_rgba(0,0,0,0.3)]"
+              style={{ left: `${pos}%` }}
+            >
+              <div className="absolute top-1/2 left-1/2 grid h-12 w-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-white shadow-xl">
+                <span className="font-mono text-[12px] font-bold tracking-widest text-black">
+                  ◀ ▶
+                </span>
+              </div>
+            </div>
+
+            {/* Лейблы */}
+            <span className="pointer-events-none absolute left-6 top-6 z-10 rounded bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-black backdrop-blur-md">
+              ДО
+            </span>
+            <span className="pointer-events-none absolute right-6 top-6 z-10 rounded bg-[#FF5C1A] px-4 py-2 text-[11px] font-bold uppercase tracking-[0.2em] text-white shadow-lg">
+              ПОСЛЕ
+            </span>
+          </div>
+        </div>
+
+        {/* Нижняя подпись */}
+        <div className="mt-10 w-fit mx-auto rounded-2xl border border-white/50 bg-white/40 p-5 backdrop-blur-md shadow-sm">
+          <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-black">
+            НАГЛЯДНОЕ СРАВНЕНИЕ ДО / ПОСЛЕ
           </p>
         </div>
 
-        {/* slider */}
-        <div className='aspect-3/4 max-h-[70vh] flex justify-center w-full'>
-
-        
-        <div
-          ref={ref}
-          onMouseDown={start}
-          onTouchStart={start}
-          className="relative mt-12 aspect-3/4 w-fit max-h-[70vh] cursor-ew-resize select-none overflow-hidden rounded-4xl border border-white/10 bg-white/5 "
-          style={{ touchAction: 'none' }}
-        >
-          {/* AFTER — база, всегда во всю ширину */}
-          <img
-            src={BEFORE_AFTER.after}
-            alt="после"
-            draggable={false}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-
-          {/* BEFORE — тот же размер, просто отрезаем справа через clip-path */}
-          <img
-            src={BEFORE_AFTER.before}
-            alt="до"
-            draggable={false}
-            className="absolute inset-0 h-full w-full object-cover"
-            style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
-          />
-
-          {/* handle */}
-          <div
-            className="pointer-events-none absolute inset-y-0 z-20 w-px bg-red shadow-[0_0_20px_rgba(255,255,255,0.6)]"
-            style={{ left: `${pos}%` }}
-          >
-            <div className="absolute top-1/2 left-1/2 grid h-12 w-12 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-red/40 bg-red/80 backdrop-blur">
-              <span className="font-mono text-[10px] font-bold tracking-widest text-white">
-                ◀ ▶
-              </span>
-            </div>
-          </div>
-
-          {/* labels */}
-          <span className="pointer-events-none rounded absolute left-5 top-5 z-10 border border-white/20 bg-black/60 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-white backdrop-blur">
-            ДО
-          </span>
-          <span className="pointer-events-none rounded absolute right-5 top-5 z-10 border border-red bg-red px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-black">
-            ПОСЛЕ
-          </span>
-        </div>
-</div>
-        <p className="mt-4 text-center text-[11px] uppercase tracking-[0.24em] text-red">
-          Наглядное сравнение ДО / ПОСЛЕ
-        </p>
       </div>
     </section>
   );

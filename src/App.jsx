@@ -13,11 +13,11 @@ import Footer from './components/Footer';
 import Gallery from './components/Gallery';
 
 export default function App() {
-  useSmoothScroll();
+  // useSmoothScroll();
 
   return (
     <div className="relative min-h-screen bg-white font-sans text-white antialiased">
-      <Grain />
+      {/* <Grain /> */}
       <Header />
       <main>
         <Hero/>

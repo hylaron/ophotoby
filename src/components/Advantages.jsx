@@ -40,7 +40,7 @@ export default function Advantages({index}) {
           </span>
         </div>
 
-        <h2 className="mt-10 max-w-4xl font-display text-[clamp(2rem,5.5vw,4.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.03em]">
+        <h2 className="mt-10 max-w-4xl font-display text-[clamp(2.8rem,5.5vw,4.5rem)] font-bold uppercase leading-[0.95] tracking-[-0.03em]  drop-shadow-xl drop-shadow-black/10">
           БЕЗУПРЕЧНОЕ ФОТО,
           <br />
           КОТОРОЕ <span className="text-red">С ВАМИ НАДОЛГО</span>

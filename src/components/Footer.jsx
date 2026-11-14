@@ -1,18 +1,16 @@
-import { RiInstagramLine, RiTelegram2Fill } from 'react-icons/ri';
-import { CONTACTS } from '../data';
-import { FaViber, FaWhatsapp } from 'react-icons/fa';
-
 export default function Footer() {
   return (
-    <footer className="relative  bg-black">
-      <div aria-hidden className="pointer-events-none absolute bottom-0 left-1/2 h-[26rem] w-[100%] -translate-x-1/2 rounded-full bg-red opacity-15 blur-[160px]" />
-
-      <div className="relative mx-auto max-w-[1440px] px-5 pb-10 sm:px-10">
-        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-[10px] uppercase tracking-[0.28em] text-white/30">
+    <footer className="relative w-full bg-transparent pb-8 pt-2">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-10">
+        
+        {/* Оранжевая стеклянная плашка */}
+        <div className="flex flex-wrap text-[13px] sm:text-[14px] items-center justify-between rounded-[1.5rem] border border-[#FF5C1A]/20 bg-white/30 backdrop-blur-xl p-5 sm:p-6 text-black/70 shadow-[0_8px_32px_rgba(255,92,26,0.20)] ">
           <span>© {new Date().getFullYear()} OPHOTO.BY</span>
+          
+          
           <span>МИНСК · БЕЛАРУСЬ</span>
-          <span>ФОТО НА ДОКУМЕНТЫ</span>
         </div>
+        
       </div>
     </footer>
   );
