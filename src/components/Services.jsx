@@ -45,7 +45,7 @@ export default function Services({ index = 3 }) {
           
           {/* ЛЕВАЯ КОЛОНКА */}
           <div className="lg:col-span-4 flex flex-col">
-            <h2 className="font-display text-[clamp(4rem,7vw,5.5rem)] font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-white drop-shadow-xl drop-shadow-black/20">
+            <h2 className="font-display text-[clamp(4rem,7vw,5.5rem)] font-extrabold uppercase leading-[0.9] tracking-[-0.03em] text-black drop-shadow-xl drop-shadow-black/20">
               СКОЛЬКО<br /><span className="text-[#FF5C1A]">СТОИТ</span>
             </h2>
 
