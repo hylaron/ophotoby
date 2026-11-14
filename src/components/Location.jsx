@@ -12,12 +12,12 @@ export default function Location({ index = 4 }) {
       <div className="relative z-10 mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
         
         {/* Верхняя линия */}
-        <div className="flex items-center gap-4 border-b border-black/10 pb-5">
+        <div className="flex items-center gap-4 p-5 rounded-[2rem] border border-white/60 bg-white/40 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] backdrop-blur-xl">
           <span className="h-1.5 w-1.5 rounded-full bg-[#FF5C1A]" />
           <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-black/60">
             0{index} / КАК НАС НАЙТИ
           </span>
-          <span className="ml-auto hidden text-[11px] font-bold uppercase tracking-[0.24em] text-black/40 sm:inline">
+          <span className="ml-auto hidden text-[11px] uppercase tracking-[0.24em] text-black/80 sm:inline">
             ЦЕНТР МИНСКА
           </span>
         </div>

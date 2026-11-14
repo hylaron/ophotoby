@@ -19,10 +19,10 @@ export default function Documents({index}) {
   return (
     <section id="documents" ref={container} className="bg-white text-black">
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-28">
-        <div className="flex items-center gap-4 border-b border-black/10 pb-5">
+        <div className="flex items-center gap-4 p-5 rounded-[2rem] border border-white/60 bg-white/40 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] backdrop-blur-xl">
           <span className="h-1.5 w-1.5 rounded-full bg-red" />
           <span className="text-[11px] font-medium uppercase tracking-[0.24em] text-black/50">0{index} / ДОКУМЕНТЫ</span>
-          <span className="ml-auto hidden text-[11px] uppercase tracking-[0.24em] text-black/40 sm:inline">
+          <span className="ml-auto hidden text-[11px] uppercase tracking-[0.24em] text-black/80 sm:inline">
             ЛЮБОЙ ФОРМАТ
           </span>
         </div>

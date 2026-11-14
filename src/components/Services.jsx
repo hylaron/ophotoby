@@ -28,12 +28,12 @@ export default function Services({ index = 3 }) {
     <section 
       id="services" 
       ref={container} 
-      className='relative w-full bg-cover bg-no-repeat lg:bg-[url("/images/bg3.webp")] max-lg:bg-[url("/images/bg3m.webp")] max-lg:bg-bottom'
+      className='relative w-full bg-cover bg-no-repeat lg:bg-[url("/images/bg3.webp")] max-lg:bg-[url("/images/bg3m.webp")] max-lg:bg-bottom rounded-[5%]'
     >
       <div className="mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
         
         {/* Верхняя линия */}
-        <div className="flex items-center gap-4 border-b border-black/10 pb-5">
+        <div className="flex items-center gap-4 p-5 rounded-[2rem] border border-white/60 bg-white/40 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] backdrop-blur-xl">
           <span className="h-1.5 w-1.5 rounded-full bg-[#FF5C1A]" />
           <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-black/60">
             0{index} / УСЛУГИ

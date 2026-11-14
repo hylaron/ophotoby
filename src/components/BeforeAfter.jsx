@@ -44,12 +44,11 @@ export default function BeforeAfter({ index = 5 }) {
     // Убрал жесткие рамки и скругления секции, чтобы сливалось с общим фоном сайта
     <section 
       id="beforeafter" 
-      className="relative w-full bg-cover  bg-no-repeat"
-      style={{ backgroundImage: 'url("/images/bg2.webp")' }}
+      className='relative w-full bg-cover bg-no-repeat lg:bg-[url("/images/bg2.webp")] max-lg:bg-[url("/images/bg2m.webp")] rounded-[5%]'
     >
       <div className="relative z-10 mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       {/* Верхняя линия с подписями */}
-        <div className="flex items-center gap-4 border-b border-black/20 pb-5">
+        <div className="flex items-center gap-4 p-5 rounded-[2rem] border border-white/60 bg-white/40 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] backdrop-blur-xl">
           <span className="h-1.5 w-1.5 rounded-full bg-[#FF5C1A]" />
           <span className="text-[11px] font-bold uppercase tracking-[0.24em] text-black/70">
             0{index} / СРАВНЕНИЕ
