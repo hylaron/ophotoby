@@ -62,15 +62,15 @@ export default function BeforeAfter({ index = 5 }) {
         <div className="mt-12 flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           
           {/* Заголовок (добавил легкую тень, чтобы белый текст не сливался со светлым фоном) */}
-          <h2 className="font-display text-[clamp(3.5rem,6.5vw,5.5rem)] font-bold uppercase leading-[0.9] tracking-[-0.03em] drop-shadow-xl drop-shadow-black/20">
+          <h2 className="font-display text-[clamp(3.5rem,6.5vw,5.5rem)] max-md:text-center font-bold uppercase leading-[0.9] tracking-[-0.03em] drop-shadow-xl drop-shadow-black/20">
             РАЗНИЦА<br />
             <span className="text-[#FF5C1A]">ОЧЕВИДНА</span>
           </h2>
 
           {/* Описание (добавил стеклянную плашку и темный текст) */}
-          <div className="max-w-xs md:mt-6">
+          <div className="max-w-xs md:mt-6 max-md:mx-auto">
             <div className="rounded-2xl border border-white/50 bg-white/40 p-5 backdrop-blur-md shadow-sm">
-              <p className="text-[14px] font-medium leading-relaxed text-black">
+              <p className="text-[14px] font-medium leading-relaxed text-black max-md:text-center">
                 Слева — обычное фото из салона. Справа — наша ретушь и свет. Один и тот же человек.
               </p>
             </div>

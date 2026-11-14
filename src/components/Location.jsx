@@ -96,7 +96,7 @@ export default function Location({ index = 4 }) {
               
               {/* Убрал темный фильтр invert, теперь карта светлая и читаемая */}
               <iframe
-                src="https://yandex.by/map-widget/v1/?text=Минск%2C%20улица%20Карла%20Маркса%2C%2040&z=17"
+                src="https://yandex.by/map-widget/v1/?ll=27.565363%2C53.901433&mode=search&oid=21291280127&ol=biz&z=19.21"
                 className="absolute inset-0 h-full w-full grayscale-[20%]"
                 style={{ border: 0 }}
                 loading="lazy"

@@ -52,22 +52,22 @@ export default function Hero() {
         <div className="mt-20 rounded-[2rem] border border-white/60 bg-white/60 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] backdrop-blur-xl">
           <div className="grid grid-cols-1 md:grid-cols-3">
             
-            <div className="flex flex-col px-8 py-8">
+            <div className="flex flex-col px-8 py-8 max-md:text-center">
               <span className="text-[11px] font-bold uppercase tracking-wider text-red">РЕЖИМ РАБОТЫ</span>
               <span className="mt-2 font-display text-2xl font-bold text-black">10:00 — 21:00</span>
               <span className="mt-1 text-[14px] text-black/60">каждый день, по записи</span>
             </div>
 
-            <a href={CONTACTS.geoUrl} target="_blank" rel="noreferrer" className="border max-md:border-y-red/20 md:border-x-red/20 group flex flex-col px-8 py-8 hover:scale-105 hover:bg-white/90 hover:rounded-4xl duration-500">
+            <a href={CONTACTS.geoUrl} target="_blank" rel="noreferrer" className="max-md:text-center border max-md:border-y-red/20 md:border-x-red/20 group flex flex-col px-8 py-8 hover:scale-105 hover:bg-white/90 hover:rounded-4xl duration-500">
               <span className="text-[11px] font-bold uppercase tracking-wider text-red">АДРЕС</span>
               <span className="mt-2 font-display text-2xl font-bold uppercase text-black group-hover:text-red transition">КАРЛА МАРКСА 40</span>
               <span className="mt-1 text-[14px] text-black/60">оф. 31 · 2 этаж</span>
             </a>
 
             <div className="flex flex-col px-8 py-8">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-red">РЕТУШЬ</span>
-              <span className="mt-2 font-display text-2xl font-bold text-black">10 МИНУТ</span>
-              <span className="mt-1 text-[14px] text-black/60">готовые фото с собой</span>
+              <span className="text-[11px] font-bold uppercase tracking-wider max-md:text-center text-red">РЕТУШЬ</span>
+              <span className="mt-2 font-display text-2xl font-bold text-black  max-md:text-center">10 МИНУТ</span>
+              <span className="mt-1 text-[14px] text-black/60  max-md:text-center">готовые фото с собой</span>
             </div>
 
           </div>
