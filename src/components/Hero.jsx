@@ -16,7 +16,6 @@ export default function Hero() {
           <div className="w-full lg:w-[58%] text-center lg:text-left relative z-20">
             <h1 className="mt-10 font-display text-[clamp(3rem,5vw,5rem)] font-bold uppercase leading-[0.95] tracking-[-0.04em] text-black">
               КРАСИВЫЕ ФОТО
-              <br />
               НА ДОКУМЕНТЫ
               <br />
               <span className="text-red">В МИНСКЕ</span>
