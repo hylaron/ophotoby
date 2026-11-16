@@ -44,7 +44,7 @@ export default function BeforeAfter({ index = 5 }) {
     // Убрал жесткие рамки и скругления секции, чтобы сливалось с общим фоном сайта
     <section 
       id="beforeafter" 
-      className='relative w-full bg-cover bg-no-repeat bg-[url("/images/bg2.webp")] max-lg:bg-[url("/images/bg2m.webp")] rounded-[5%]'
+      className='relative w-full bg-cover bg-no-repeat bg-[url("/images/bg2.webp")] max-lg:bg-[url("/images/bg2m.webp")] rounded-[4rem]'
     >
       <div className="relative z-10 mx-auto max-w-[1440px] px-5 py-24 sm:px-10 sm:py-32">
       {/* Верхняя линия с подписями */}
