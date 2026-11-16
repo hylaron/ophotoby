@@ -108,8 +108,8 @@ export default function Services({ index = 3 }) {
           <div className="lg:col-span-8 flex flex-col mt-4 lg:mt-0 gap-4">
             
             {/* Описание для ДЕСКТОПА (на мобильных скрыто) */}
-            <p className="hidden lg:block self-end max-w-[280px] text-[15px] font-medium leading-relaxed text-black/80 text-right">
-              Прозрачные цены. Всё, что нужно — уже включено: ретушь, печать, цифровая копия.
+            <p className="hidden lg:block self-end text-[15px] font-medium leading-relaxed text-black/80 text-right">
+              Прозрачные цены. Всё, что нужно — уже включено:<br/>ретушь, печать, цифровая копия.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
