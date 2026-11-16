@@ -49,7 +49,7 @@ export default function Location({ index = 4 }) {
               <div className="border-t border-black/10 pt-5">
                 <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#FF5C1A]">/ ЧАСЫ РАБОТЫ</div>
                 <div className="mt-3 flex flex-wrap items-baseline gap-4">
-                  <span className="font-display text-lg sm:text-xl font-bold uppercase text-black">
+                  <span className="font-display text-2xl sm:text-xl font-bold uppercase text-black">
                     {CONTACTS.hours}
                   </span>
                   <span className="text-[14px] font-medium text-black/50">{CONTACTS.hoursNote}</span>

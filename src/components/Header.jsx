@@ -80,7 +80,7 @@ export default function Header() {
               ))}
             </div>
 
-            <a href={CONTACTS.bookingUrl} target="_blank" rel="noreferrer" className="hidden uppercase items-center justify-center rounded bg-red px-6 py-2.5 text-[12px] font-medium text-white transition hover:bg-red sm:inline-flex">
+            <a href={CONTACTS.bookingUrl} target="_blank" rel="noreferrer" className="hidden uppercase items-center justify-center rounded bg-red px-6 py-2.5 text-[12px] font-medium text-white hover:text-red hover:bg-white border border-transparent hover:border-red transition sm:inline-flex">
               Записаться
             </a>
 

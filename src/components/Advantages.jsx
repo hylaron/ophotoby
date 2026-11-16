@@ -22,7 +22,7 @@ export default function Advantages({index}) {
         trigger: container.current,
         start: '20% 85%',
         once: true,
-        markers: true
+        // markers: true
       },
     });
   }, { scope: container });
