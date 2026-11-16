@@ -36,7 +36,7 @@ export default function Location({ index = 4 }) {
                 <div className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#FF5C1A]">/ АДРЕС</div>
                 <a
                   href={CONTACTS.geoUrl} target="_blank" rel="noreferrer"
-                  className="mt-3 block font-display text-xl sm:text-2xl font-bold uppercase leading-tight text-black transition hover:text-[#FF5C1A]"
+                  className="mt-3 block font-display text-2xl font-bold uppercase leading-tight text-black transition hover:text-[#FF5C1A]"
                 >
                   {CONTACTS.address}
                 </a>
