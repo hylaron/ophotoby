@@ -34,12 +34,12 @@ export default function Documents({index}) {
           <div className="md:col-span-5">
             <p className="mt-6 max-w-md text-base text-black/65">
               Делаем фото для любых документов и инстанций. Учитываем требования
-              конкретной страны и ведомства. Если фото не подойдёт — напечатаем новое бесплатно.
+              конкретной страны и ведомства. Если фото не подойдёт — напечатаем новое <span className='text-red font-bold text-lg'>бесплатно.</span>
             </p>
 
             <a
               href="#services"
-              className="mt-8 inline-flex items-center gap-3 border border-black/15 px-6 py-3.5 text-[11px] font-bold uppercase tracking-[0.22em] transition hover:border-black hover:bg-black hover:text-white"
+              className="mt-8 inline-flex items-center gap-3 bg-red text-white border border-transparent px-6 py-3.5 text-[13px] sm:text-[14px] rounded font-bold uppercase transition hover:border-red hover:bg-white hover:text-red"
             >
               СМОТРЕТЬ ТАРИФЫ
             </a>
